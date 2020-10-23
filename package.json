@@ -1,7 +1,7 @@
 {
   "name": "main-site",
   "version": "0.0.1",
-  "description": "Main site and blog for other corner games",
+  "description": "Blog for other corner games",
   "main": "index.js",
   "authors": {
     "name": "Darryl Kilzer Jr.",

@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Other Corner Games Blog',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
