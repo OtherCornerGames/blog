@@ -1,0 +1,19 @@
+{
+  "name": "main-site",
+  "version": "0.0.1",
+  "description": "Main site and blog for other corner games",
+  "main": "index.js",
+  "authors": {
+    "name": "Darryl Kilzer Jr.",
+    "email": "othercornergames@gmail.com"
+  },
+  "repository": "https://github.com/OtherCornerGames/othercornergames.github.io/main-site",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
