@@ -1,5 +1,6 @@
 const { description } = require('../../package.json')
 
+
 module.exports = {
   base: "/blog/",
   /**
