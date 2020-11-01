@@ -1,15 +1,15 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: Main site and blog for other corner games
+heroImage: /images/OCGLogoPSD1.png
+tagline: Main site and blog for Other Corner Games
 actionText: Quick Start →
-actionLink: /guide/
+actionLink: /full-stack-dev/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by Darryl Kilzer Jr. with ❤️
+- title: Full Stack Development
+  details: This section will feature tips, tricks, and items of interest to full stack web development.
+- title: Game Development
+  details: This section will be all about making video games, from command line, the web, to standalone application.
+- title: Art
+  details: This section will feature tips and tricks for art ranging from traditional to digital with an emphasis on content creation for games or media.
+footer: Made by Other Corner Games with ❤️
 ---

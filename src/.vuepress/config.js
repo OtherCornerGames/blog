@@ -1,5 +1,5 @@
-const { description } = require('../../package.json')
-
+const fs = require("fs");
+const path = require("path");
 
 module.exports = {
   base: "/blog/",
@@ -10,7 +10,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description: "This is a blog and resource tool for Other Corner Games",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -34,29 +34,22 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Full Stack Development',
+        link: '/full-stack-dev/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'Game Development',
+        link: '/game-dev/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Art',
+        link: '/art/'
       }
     ],
     sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
+      '/full-stack-dev/': [...getSideBar('full-stack-dev', 'Full Stack Development')],
+      '/game-dev/': [...getSideBar('game-dev', 'Game Development')],
+      '/art/': [...getSideBar('art', 'Art'), ...getSideBar('art/digital', 'Digital Art'), ...getSideBar('art/traditional', 'Traditional Art')],
     }
   },
 
@@ -67,4 +60,27 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ]
+}
+
+
+function getSideBar(folder, title) {
+  const extension = [".md"];
+  const root = folder.lastIndexOf('/') === -1 ? '' : folder.slice(folder.lastIndexOf('/') + 1)
+  const files = fs
+    .readdirSync(path.join(`${__dirname}/../${folder}`))
+    .filter(file =>
+      file.toLowerCase() != "readme.md" &&
+      fs.statSync(path.join(`${__dirname}/../${folder}`, file)).isFile() &&
+      extension.includes(path.extname(file))
+    ).map(filename => {
+      if (!root) {
+        return filename
+      }
+      return root + '/' + filename
+    });
+  const children = [...files]
+  if (!root) {
+    children.unshift('')
+  }
+  return [{ title: title, children }];
 }
