@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/OCGLogoPSD1.png
-tagline: Blog for Other Corner Games
+tagline: The Blog for Other Corner Games
 actionText: Quick Start →
 actionLink: /full-stack-dev/
 features:
