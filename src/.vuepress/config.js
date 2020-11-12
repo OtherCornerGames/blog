@@ -29,9 +29,18 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    editLinks: false,
+    editLinks: true,
     editLinkText: '',
     lastUpdated: false,
+    darkmode: "switch",
+    themeColor: {
+      blue: "#2196f3",
+      red: "#f26d6d",
+      green: "#00ffdc",
+      orange: "#fb9b5f",
+      purple: "#8e44ad",
+      banana: "#ffe135"
+    },
     nav: [
       {
         text: 'Full Stack Development',
